@@ -1,5 +1,9 @@
 # Flask Data Visualization:
 
+This is the code base for my PyCon Ireland 2019 presentation.
+
+For more information and to view my PyCon IE presentation visit my [blog](http://allynh.com/blog/pycon-ie-2019/): 
+
 ## This project is a fork of Miguel Grinbergs Mocroblog project:
 See bottom of README for details.
 
