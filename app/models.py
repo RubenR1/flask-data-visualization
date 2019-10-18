@@ -291,3 +291,27 @@ class Task(db.Model):
     def get_progress(self):
         job = self.get_rq_job()
         return job.meta.get('progress', 0) if job is not None else 100
+
+class Company(db.Model):
+    __tablename__ = 'company'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(140))
+    company_ceo = db.Column(db.String(140))
+    business_type = db.Column(db.String(140))
+    finances = db.relationship('Finance', backref='finance', lazy='dynamic')
+
+    def __repr__(self):
+        return '<Company {}>'.format(self.name)
+
+class Finance(db.Model):
+    __tablename__ = 'finance'
+    id = db.Column(db.Integer, primary_key=True)
+    year = db.Column(db.Integer, index=True, default=1999)
+    q1_earnings = db.Column(db.Float)
+    q2_earnings = db.Column(db.Float)
+    q3_earnings = db.Column(db.Float)
+    q4_earnings = db.Column(db.Float)
+    company_id = db.Column(db.Integer, db.ForeignKey('company.id'))
+
+    def __repr__(self):
+        return '<Finance {}>'.format(self.id)

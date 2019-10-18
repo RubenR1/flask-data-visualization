@@ -38,3 +38,7 @@ nosetests.xml
 venv
 app.db
 microblog.log*
+.flaskenv
+app/static/node_modules
+.vscode/
+startup.bat

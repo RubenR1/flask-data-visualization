@@ -46,6 +46,26 @@ def index():
                            posts=posts.items, next_url=next_url,
                            prev_url=prev_url)
 
+@login_required
+@bp.route('/bootstrap', methods=['GET', 'POST'])
+def bootstrap():
+    return render_template('bootstrap.html')
+
+@login_required
+@bp.route('/finance/<int:id>/<int:year>', methods=['GET', 'POST'])
+def finance(id, year):
+    return render_template('finance.html')
+
+@login_required
+@bp.route('/chart_examples')
+def chart_examples():
+    return render_template('chart_examples.html')
+
+@login_required
+@bp.route('/hello_world')
+def hello_world():
+    return render_template('hello_world.html')
+
 
 @bp.route('/explore')
 @login_required
