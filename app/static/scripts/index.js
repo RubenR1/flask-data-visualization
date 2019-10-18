@@ -10,14 +10,17 @@ import Finance from "./Finance";
 import HelloWorld from "./HelloWorld";
 
 console.log("Rendering App")
-// Uncomment next 4 lines to view: http://127.0.0.1:5000/chart_examples
-// ReactDOM.render(<BarChart />, document.getElementById("barchart-app"));
-// ReactDOM.render(<BoxPlot />, document.getElementById("boxplot-app"));
-// ReactDOM.render(<PieChart />, document.getElementById("piechart-app"));
-// ReactDOM.render(<PieChart2 />, document.getElementById("piechart2-app"));
-
-// Uncomment this line to view Finance:
-ReactDOM.render(<Finance />, document.getElementById("finance-app"));
-
-
-// ReactDOM.render(<HelloWorld />, document.getElementById("hello-world-app"));
+let url = window.location.href.toLowerCase();
+console.log(url)
+if (url.includes("finance"))
+{
+    console.log("Bingpot!")
+    ReactDOM.render(<Finance />, document.getElementById("finance-app"));
+}
+else if (url.includes("chart_examples"))
+{
+    ReactDOM.render(<BarChart />, document.getElementById("barchart-app"));
+    ReactDOM.render(<BoxPlot />, document.getElementById("boxplot-app"));
+    ReactDOM.render(<PieChart />, document.getElementById("piechart-app"));
+    ReactDOM.render(<PieChart2 />, document.getElementById("piechart2-app"));
+}

@@ -1,6 +1,6 @@
 # Flask Data Visualization:
 
-## This project is a fork of Miguel Grinbergs Mocroblog code:
+## This project is a fork of Miguel Grinbergs Mocroblog project:
 See bottom of README for details.
 
 ## How to run:
@@ -36,27 +36,17 @@ http://127.0.0.1:5000/api_1_0/get_finances/1/2018
 
 All Victory Chart code within these routes was directly copied from: https://github.com/FormidableLabs/victory
 
-However, only 1 endpoint is supported at a time in this app (This can be fixed at a later stage).
+http://127.0.0.1:5000/chart_examples
 
-You need to comment out the JS you're not using.
 
-**in: app\static\scripts\index.js:**
+`.`
 
-```javascript
-// Uncomment next 4 lines to view: http://127.0.0.1:5000/chart_examples
-ReactDOM.render(<BarChart />, document.getElementById("barchart-app"));
-ReactDOM.render(<BoxPlot />, document.getElementById("boxplot-app"));
-ReactDOM.render(<PieChart />, document.getElementById("piechart-app"));
-ReactDOM.render(<PieChart2 />, document.getElementById("piechart2-app"));
-```
+`.`
 
-**then comment out the unused JS:**
+`.`
 
-```javascript
-// Uncomment next 4 lines to view: http://127.0.0.1:5000/chart_examples
-// Uncomment this line to view Finance:
-// ReactDOM.render(<Finance />, document.getElementById("finance-app"));
-```
+`.`
+
 
 # Below follows oiginal README.md:
 
