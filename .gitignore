@@ -42,3 +42,4 @@ microblog.log*
 app/static/node_modules
 .vscode/
 startup.bat
+/.idea/
